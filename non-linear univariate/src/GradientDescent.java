@@ -2,7 +2,7 @@ import java.util.List;
 
 public class GradientDescent {
 
-    public static final String DATA_FILE = "data/MacdonellDF.csv";
+    public static final String DATA_FILE = "data/data.csv";
 
     public static void main(String[] args) {
 
