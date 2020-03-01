@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7200 64-bit) (preloaded format=xelatex 2020.2.20)  22 FEB 2020 12:30
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7200 64-bit) (preloaded format=xelatex 2020.2.20)  1 MAR 2020 23:30
 entering extended mode
 **./machinelearning.tex
 (machinelearning.tex
@@ -632,34 +632,76 @@ LaTeX Font Info:    ... okay on input line 41.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 45.
+(Font)              <7> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 45.
+(Font)              <5> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 49.
+(Font)              <8> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 49.
+(Font)              <6> on input line 47.
 \openout3 = `machinelearning.pyg'.
 
 (_minted-machinelearning/default-pyg-prefix.pygstyle)
 (_minted-machinelearning/default.pygstyle)
-(_minted-machinelearning/2D5E2AB6780ADD966FCD65623F273977323EDE59F418A6D50BB468
+(_minted-machinelearning/99DB875F88AB783F34496E7D9C6B8B2F323EDE59F418A6D50BB468
 F757EDA372.pygtex)
-File: q1.png Graphic file (type bmp)
-<q1.png>
- [1
+File: g1.png Graphic file (type bmp)
+<g1.png>
+\openout3 = `machinelearning.pyg'.
 
-] (machinelearning.aux)
+
+(_minted-machinelearning/7D72F7C4163ADF783AE2D282E13F4FAC323EDE59F418A6D50BB468
+F757EDA372.pygtex) [1
+
+]
+\openout3 = `machinelearning.pyg'.
+
+
+(_minted-machinelearning/5202FDC528435F6136453E293B5B2CB0323EDE59F418A6D50BB468
+F757EDA372.pygtex)
+File: g2.png Graphic file (type bmp)
+<g2.png>
+\openout3 = `machinelearning.pyg'.
+
+
+(_minted-machinelearning/9AD7290543C4281E33CA5C7957F4ECEE323EDE59F418A6D50BB468
+F757EDA372.pygtex) [2]
+runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P enc
+oding=utf-8 -P mathescape=True -P "escapeinside=||" -o _minted-machinelearning/
+0DC1D60875B8CCC06930897403A3B49363E6463067DB5D00FBB2685C822A6254.pygtex solutio
+n1.java)...executed.
+
+
+(_minted-machinelearning/0DC1D60875B8CCC06930897403A3B49363E6463067DB5D00FBB268
+5C822A6254.pygtex
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
+) [3]
+runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P enc
+oding=utf-8 -P mathescape=True -P "escapeinside=||" -o _minted-machinelearning/
+31605010947B34F5403B3C1877230524E224D095018E6F76BB27427013EF3290.pygtex solutio
+n2.java)...executed.
+
+
+(_minted-machinelearning/31605010947B34F5403B3C1877230524E224D095018E6F76BB2742
+7013EF3290.pygtex)
+runsystem(del _minted-machinelearning\6466BEFF5423D9BA0EFEAE27C364F07763E646306
+7DB5D00FBB2685C822A6254.pygtex)...executed.
+
+runsystem(del _minted-machinelearning\C49309F2486004AA1349081D43CF554FE224D0950
+18E6F76BB27427013EF3290.pygtex)...executed.
+
+ [4] (machinelearning.aux)
 runsystem(del machinelearning.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 6214 strings out of 427243
- 103768 string characters out of 3141512
- 227421 words of memory out of 3000000
- 10610 multiletter control sequences out of 15000+200000
- 5519 words of font info for 27 fonts, out of 3000000 for 9000
+ 6257 strings out of 427243
+ 106430 string characters out of 3141512
+ 247579 words of memory out of 3000000
+ 10631 multiletter control sequences out of 15000+200000
+ 5535 words of font info for 29 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 47i,11n,45p,843b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,11n,45p,843b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on machinelearning.pdf (1 page).
+Output written on machinelearning.pdf (4 pages).

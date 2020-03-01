@@ -1,8 +1,8 @@
 import java.util.List;
 
-public class GradientDescent {
+public class LogisticRegression {
 
-    public static final String DATA_FILE = "data/data.csv";
+    public static final String DATA_FILE = "data/data1.csv";
 
     public static void main(String[] args) {
 
@@ -10,13 +10,13 @@ public class GradientDescent {
         // Data and Graph setup.
         // -------------------------------------------------
         List<List<Double>> data = Data.dataFrom(DATA_FILE);
-        Plot plt = new Plot("", "x", "y", data);
+        Plot plt = new Plot("", "x1", "x2", data);
         sleep(500);
 
         // -------------------------------------------------
         // Gradient Descent
         // -------------------------------------------------
-        final int epochs = 10000;  // Number of iterations we want to run through the algorithm
+        final int epochs = 100;  // Number of iterations we want to run through the algorithm
 
         // We want to predict h(x) = w1 * x + w0
         double w1 = 0;
@@ -24,7 +24,7 @@ public class GradientDescent {
         double w2 = 0;
 
         // Learning rate
-        double alpha = .00000001;
+        double alpha = .1;
 
         // Main Gradient Descent Function for Linear Regression
         for (int i = 0; i < epochs; i++) {
@@ -33,17 +33,24 @@ public class GradientDescent {
 
             for (int j = 0; j < data.get(0).size(); j++) {
 
-                double x_j = data.get(0).get(j);
-                double y_j = data.get(1).get(j);
+                double x_1 = data.get(0).get(j);
+                double x_2 = data.get(1).get(j);
+                double y = data.get(2).get(j);
 
-                double prediction = (w1 * x_j) + w0 + (w2 * Math.pow(x_j, 2));
-                // cost += (y_j - h(x))^2
-                cost += (y_j - prediction) * (y_j - prediction);
+
+                double prediction = sigmoid((w1 * x_1) + w0 + (w2 * x_2));
+
+                if (y == 1) {
+                    cost += -(Math.log(prediction));
+                }
+                if (y == 0) {
+                    cost += -(1 - Math.log(prediction));
+                }
 
                 // Update the parameters for our equation.
-                w1 += alpha * (y_j - prediction) * x_j;
-                w2 += alpha * (y_j - prediction) * Math.pow(x_j, 2);
-                w0 += alpha * (y_j - prediction);
+                w1 += alpha * (y - prediction) * x_1;
+                w2 += alpha * (y - prediction) * x_2;
+                w0 += alpha * (y - prediction);
 
 
             }
@@ -53,11 +60,13 @@ public class GradientDescent {
             final double w_1 = w1;
             final double w_0 = w0;
             final double w_2 = w2;
-            HypothesisFunction h_x = (x) -> (w_2 * Math.pow(x, 2)) + (w_1 * x) + w_0;
+            HypothesisFunction h_x = (x) -> (((-w_1) * x) - w_0) / w_2;
 
             plt.updatePlot(h_x);
         }
-        System.out.println("h(x) = (" + w2 + " * x^2) + (" + w1 + " * x) +" + w0);
+        System.out.println("w2 = " + w0);
+        System.out.println("w1 = " + w1);
+        System.out.println("w0 = " + w0);
     }
 
     static void sleep(int ticks) {
@@ -66,6 +75,10 @@ public class GradientDescent {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    static double sigmoid(double x) {
+        return 1 / (1 + Math.pow(Math.E, -x));
     }
 
 }
