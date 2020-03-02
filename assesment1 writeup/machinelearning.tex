@@ -2,7 +2,7 @@
 
 \usepackage[utf8x]{inputenc}
 
-\usepackage[left=1cm,top=2cm,right=1cm,bottom=2cm]{geometry}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
 
 \usepackage{geometry}
 \geometry{a4paper}
@@ -28,6 +28,11 @@ encoding=utf-8
 \usepackage{bussproofs}
 \usepackage{cancel}
 \usepackage{tabularx}
+
+\usepackage{amsmath,bm}
+\usepackage{unicode-math}
+\setmathfont[]{CambriaMath}
+\setmathfont[version=bold,FakeBold=2]{CambriaMath}
 
 %\usepackage{tcolorbox}
 %\usepackage{etoolbox}
@@ -109,6 +114,31 @@ Multivariate Logistic Regression with inital values of $w_{0}$, $w_{1}$ and $w_{
 \end{minted}
 
 \noindent As you can see the cost is strictly decreasing after each iteration. This means that my decision boundry function is converging to an accurate result.
+
+\newpage
+
+\section*{Question 3:}
+
+Neural Network capable of performing the XNAND\footnote{$(x_1 \wedge \neg x_2) \vee (\neg x_1 \wedge x_2)$} operation on two variables $x_1$ and $x_2$:
+\begin{figure}[h]
+\includegraphics[scale=.4]{g3.jpeg}
+\centering
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\def\arraystretch{2}
+\Large
+\centering
+\begin{tabular}{| p{3.5cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
+\hline
+\mathversion{bold}$x_1$ & \mathversion{bold}$x_2$ & \mathversion{bold}$z$  & \mathversion{bold}$g(z)$ \\ \hline
+0  & 0  & -10 & 0  \\
+0  & 1  & 20  & 1  \\
+1  & 0  & 20  & 1  \\
+1  & 1  & -10 & 0 \\ \hline
+\end{tabular}
+\end{table}
 
 \newpage
 
